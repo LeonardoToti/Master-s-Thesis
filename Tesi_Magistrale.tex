@@ -1,0 +1,112 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage[T1]{fontenc}
+\DeclareUnicodeCharacter{2009}{\,}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\pagenumbering{arabic}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{xcolor}
+\usepackage{setspace}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{subcaption}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{afterpage}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage[font=small,labelfont=bf]{caption}
+%\usepackage[uniquename=false, sorting=none, style=authoryear, maxnames=3, minnames=1]{biblatex}
+
+\usepackage[backend=bibtex, sorting=none]{biblatex}
+    
+    
+
+\usepackage{epigraph}
+\usepackage{pdfpages}
+\usepackage{ragged2e}
+\usepackage[version=3]{mhchem}
+
+\newenvironment{bottompar}{\par\vspace*{\fill}}{\clearpage}
+\renewcommand{\arraystretch}{1.5}
+\pagestyle{fancy}
+\fancyhead[LE]{\slshape}
+\fancyhead[LO]{\slshape }
+\fancyfoot[C]{\thepage}
+\setcounter{secnumdepth}{3}
+
+
+\addbibresource{Bibliography.bib}
+
+\begin{document}
+    
+    \begin{titlepage}
+        \newgeometry{top=2cm, bottom=2cm, left=2cm, right=2cm}
+	\begin{center}
+            \Large{UNIVERSIT\`A DEGLI STUDI DI MILANO BICOCCA} 
+            \\[8pt]
+            \hrule
+           	\vspace{20pt}
+            {\bf \huge \sc Scuola di scienze} \\[10pt]
+            {\huge Dipartimento di Fisica "Giuseppe Occhialini"} \\[15pt]
+            \includegraphics[width=5cm]{logo.png}\\[20pt]
+            {\huge Master's degree course in Astrophysics and Space Physics}\\[50pt]
+            {\Huge \bfseries Improving the robustness of tests of \\[10pt] General Relativity}\\[50pt]
+            \large{Supervisor:}
+            \hfill
+            \large{Candidate:}\\
+            Prof. \textbf{Davide Gerosa}
+            \hfill
+            \textbf{Leonardo Toti}\\[20pt]
+            \large{Co-supervisor:}
+            \hfill
+            \large{N° di matricola:}\\
+            Dott. \textbf{Alexandre Toubiana}
+            \hfill
+            \textbf{865598}\\[55pt]
+			
+            \hrule
+            \vspace{10pt}
+            \LARGE Anno Accademico 2024--2025
+	\end{center}
+	\end{titlepage}
+        \restoregeometry
+    
+    \thispagestyle{empty}
+	
+
+ 	\clearpage\null\thispagestyle{empty}\newpage
+ 	\include{Abstract}
+	\clearpage\null\thispagestyle{empty}\newpage
+	
+	
+	\newpage        
+	\tableofcontents                        
+	\clearpage\null\thispagestyle{empty}\newpage
+	
+
+
+	\include{Introduction}
+
+	\include{Methodology}
+	\include{Analysis}
+	\include{Conclusions}
+        
+	
+	
+	
+	\printbibliography   	
+	\clearpage\null\thispagestyle{empty}\newpage
+	
+	\thispagestyle{empty} 
+	%\include{Acknowledgments} 
+	
+	\clearpage\null\thispagestyle{empty}\newpage	 
+	 
+	 
+\end{document}
+        

@@ -1,0 +1,171 @@
+\section{Methodology} 
+
+\subsection{Waveform modelling}
+\label{ssec:Waveform_modelling}
+
+
+The EOB formalism gives us a unified analytical description of the entire compact binary coalescence. In the EOB approach, one replaces the real problem of two compact objects orbiting each other with the effective problem of an extreme mass-ratio binary, where the more massive object is a deformed-Kerr BH and the small object is an effective spinning particle \cite{Taracchini_2014}.
+
+
+The system we want to describe is a binary with BHs of mass $m_1$ and $m_2$, mass ratio $q=m_1/m2 \geq 1 $, total mass $M = m_1+m_2$, and spin $\chi_1$ and $\chi_2$. We define the dimensionless spin $\chi$ as $\chi_i = S_i/m_i^2$, limited in a range between -1 and 1. The two BHs move in quasi-circular orbits with aligned or anti-aligned spins. All the physical variables depending on the cosmological redshift $z$ are expressed in the detector frame. We adopt the cosmology determined by the Planck mission (2018) \cite{2020}.
+As we clarified before, a GW has only two polarizations, therefore we can write the strain as the sum of 
+
+\begin{equation}
+	h_+( \Theta, \iota, \varphi_0; t) - i h_\times( \Theta, \iota, \varphi_0; t) = \frac{1}{D_L} \sum_{\ell,m} -2 Y_{\ell m}(\iota, \varphi_0) h_{\ell m}(\Theta; t) \:,
+\end{equation}
+
+\noindent
+where we further expanded the strain in the basis of spinweight -2 spherical harmonic, where the parameters ($ \iota $, $\varphi_0$) denote the binary’s inclination angle with respect to the direction perpendicular to the orbital plane and the azimuthal direction to the observer, respectively, and $\Theta$ denotes the intrinsic parameters (masses and
+spins) of the binary \cite{toubiana2024measuringsourcepropertiesquasinormalmode}; $\ell$ and $m $ represents the spheroidal harmonic indices. $D_L$ is the luminosity distance of the source to the detector.
+
+In the EOB framework \cite{Buonanno_2000}, the GW harmonics are decomposed as
+
+\begin{equation}
+	h_{\ell m}(\Theta, t) = h_{\ell m}^{\text{insp-plunge}}(\Theta, t)\, \theta(t_{\ell m}^{\text{match}} - t) 
++ h_{\ell m}^{\text{merger-RD}}(\Theta, t)\, \theta(t - t_{\ell m}^{\text{match}}) \:,
+\end{equation}
+
+\noindent
+where $\theta(t)$ is the Heaviside step function, $h^{\text{insp-plunge}}_{\ell m}$ corresponds to the inspiral-plunge part of the waveform, while $h^{\text{merger-RD}}_{\ell m}$ represents the merger-ringdown waveform. In particular, as explained in \cite{pompili2023layingfoundationeffectiveonebodywaveform}, $t^{\text{match}}_{\ell m}$ is chosen to be the peak of the $(2,2)$ harmonic amplitude for all $(\ell, m)$ harmonics except $(5,5)$, for which it is taken as the peak of the $(2,2)$ harmonic minus $10M$ \cite{toubiana2024measuringsourcepropertiesquasinormalmode}.
+
+We present a description of $h^{\text{insp-plunge}}_{\ell m}$ and $h^{\text{merger-RD}}_{\ell m}$, without delving into details. The first one can be written as 
+\begin{equation}
+h^{\text{insp-plunge}}_{\ell m} = h^{F}_{\ell m} N_{\ell m} \:,
+\end{equation}
+
+\noindent
+where $h^F_{\ell m}$ is a factorized, resummed form of the post-Newtonian (PN) expanded gravitational-wave modes for aligned spins in circular orbits \cite{Damour_2009, Damour_2007}, while $N_{\ell m}$ is the nonquasi-circular (NQC) correction \cite{pompili2023layingfoundationeffectiveonebodywaveform}.
+
+The second term instead assumes the form
+
+\begin{equation}
+h^{\text{merger-RD}}_{\ell m}(t) = \nu \, \tilde{A}_{\ell m}(t) \, e^{i\tilde{\phi}_{\ell m}(t)} \, e^{-i\sigma_{\ell m 0}(t - t^{\text{match}}_{\ell m})},
+\end{equation}
+
+\noindent
+where $\nu = m_1 m_2/(m_1 + m_2)^2 $ is the symmetric mass ratio of the binary and $\sigma_{\ell m 0}$ is the complex frequency of the least-damped QNM, having overtone number zero, of the remnant BH. We define the corresponding oscillation frequency $f_{\ell m 0}$ and damping time $\tau_{\ell m 0}$ respectively as:
+\begin{subequations}
+\begin{align}
+f_{\ell m 0} &= \frac{1}{2\pi} \, \text{Re}(\sigma_{\ell m 0}) = -\frac{1}{2\pi} \, \sigma^R_{\ell m 0}, \\
+\tau_{\ell m 0} &= -\frac{1}{\text{Im}(\sigma_{\ell m 0})} = -\frac{1}{\sigma^I_{\ell m 0}}.
+\end{align}
+\end{subequations}
+
+\noindent 
+A detailed description of all the terms can be found in \cite{pompili2023layingfoundationeffectiveonebodywaveform, Cotesta_2018}.
+
+The waveforms which will be used to recover the injection signal and perform the analysis are obtained following this parametrised model by using the SEOBNRv5HM model \cite{pompili2023layingfoundationeffectiveonebodywaveform} in GR, which includes several higher harmonics, notably the $(\ell , |m|) $ = (2, 1), (3, 3), (3, 2),(4, 4), (4, 3) and (5, 5) harmonics, in addition to the dominant(2, 2) harmonic.
+
+\subsection{LISA signals}
+
+From a physical standpoint, what we can actually work with is not the true GW signal $h$ emitted by the source, but rather the detector's response to the incoming signal.
+Due to the nature of our studying system, we can resort to the \textit{long-wavelength approximation}, which is valid when the GWs has an wavelength much larger than the LISA arm length. As specified before, LISA as an arm length of $ L = 2.5 \times 10^9 $ m, which requires a maximum frequency for the source of $\sim 10^{-3}$ Hz. 
+
+This approximation simplifies the expression of the \textit{time-delay-interferometry} (TDI) variables A, E, and T \cite{Tinto_2005}. These variables are orthogonal combinations of the basic data streams, introduced with the purpose to remove the laser noise and to deal with the time delay induced by having non fixed arms between the three LISA spacecraft \cite{Hartwig_2022}. The simplified expressions for A,E, and T are the following:
+
+\begin{align}
+A &= -\frac{3}{\sqrt{2}} \left( \frac{L}{c} \right)^2 \left[ F_+(\lambda, \beta, \psi)\, \ddot{h}_+ + F_\times(\lambda, \beta, \psi)\, \ddot{h}_\times \right], \\
+E &= -\frac{3}{\sqrt{2}} \left( \frac{L}{c} \right)^2 \left[ F_+(\lambda + \tfrac{\pi}{4}, \beta, \psi)\, \ddot{h}_+ + F_\times(\lambda + \tfrac{\pi}{4}, \beta, \psi)\, \ddot{h}_\times \right], \\
+T &= 0,
+\end{align}
+
+where the antenna pattern functions are defined as:
+\begin{align}
+F_+(\lambda, \beta, \psi) &= \cos(2\psi)\, F_{+,0}(\lambda, \beta) + \sin(2\psi)\, F_{\times,0}(\lambda, \beta), \\
+F_\times(\lambda, \beta, \psi) &= -\sin(2\psi)\, F_{+,0}(\lambda, \beta) + \cos(2\psi)\, F_{\times,0}(\lambda, \beta),
+\end{align}
+
+and the basis antenna pattern functions are:
+\begin{align}
+F_{+,0}(\lambda, \beta) &= \frac{1}{2} \left( 1 + \sin^2 \beta \right) \cos(2\lambda - \tfrac{\pi}{3}), \\
+F_{\times,0}(\lambda, \beta) &= \sin \beta \sin(2\lambda - \tfrac{\pi}{3}).
+\end{align}
+
+In the above equations, $ \lambda$, $\beta$, and $\psi$ are the longitude, latitude and polarisation in the LISA frame, respectively. We consider these three variables as constant in time, since of the Signal-to-Noise Ratio (SNR) content is mostly accumulated in the last stages of the evolution, so we neglect the motion of LISA respect to the Sun \cite{toubiana2024measuringsourcepropertiesquasinormalmode}.
+
+We can notice that, unlike LIGO/Virgo interferometers where the observable is $\propto h $, here the signals is recorded as a phase shift, so the TDI variables are $ \propto \ddot{h}(t) $.
+
+When we generate mock LISA signals as injection for our analysis, the waveform starts at a frequency of $ f_{gen} = 5 \times 10^{-5} \left[M_{t}/ 2 \times 10^7 M_\odot \right] $ Hz. After transforming to the frequency domain, we keep the portion of the signal between $ f_{\min} = 2 \times 10^{-4} \left[ M_{t} /2 \times 10^7 M_\odot \right]$ Hz and $ f_{\max} $, to eliminate spurious features due to the Fourier transform. $ f_{\max} $ is chosen such that the the frequency-domain amplitude is 1 \% of its maximum value.
+
+The time and phase alignment of the signals is done by defining the time to coalescence $t_c$ as the moment the amplitude of the (2, 2) harmonic reaches its peak and defining the phase of coalescence $\phi_c$ as the phase of the (2, 2) harmonic contribution to the total waveform at $t_c$.
+
+
+
+\subsection{Test of General Relativity using fractional deviations}
+\label{Test_of_GR_using_fractional_deviations}
+
+In this thesis we want to perform tests of GR, and as it is already mentioned in sec. \ref{Test_of_GR}, we proceed with parametric agnostic tests. In order to do such tests, we modify the waveform modelling by adding deviation parameters. Considering the injection signals we use are built completely from GR, the no-hair theorem should remain valid. Therefore, we introduce fractional deviations in QNMs to see if their recovered values are compatible with zero, as we should expect from a GR signal. Furthermore, about the injection signals, we generate synthetic injections with numerical relativity (NR) waveforms. We use the waveform \texttt{SXS:BBH:2125} from the Simulating eXtreme Spacetimes Collaboration \cite{Boyle_2019} at the highest available  resolution, which provides the signal of a BHB with mass ratio 2 and aligned spins of magnitude 0.3.
+
+
+In the SEOBNRv5HM model we adopted, the complex QNM frequencies in GR are obtained for each $(\ell , |m|) $ harmonic as a function of the BH’s final mass and spin using the \texttt{qnm} Python package \cite{Stein_2019}. The BH’s mass and spin are, in turn, computed using the fitting formulas of Refs. \cite{Jim_nez_Forteza_2017, Hofmann_2016} respectively.
+
+The deviations are introduced as follows:
+ 
+\begin{align}
+f_{\ell m 0} &\rightarrow f_{\ell m 0} \left(1 + \delta f_{\ell m} \right), \tag{2.9a} \\
+\tau_{\ell m 0} &\rightarrow \tau_{\ell m 0} \left(1 + \delta \tau_{\ell m} \right) \tag{2.9b}
+\end{align}
+
+\noindent
+as it is already presented in \cite{toubiana2024measuringsourcepropertiesquasinormalmode, Brito_2018, isi2021analyzingblackholeringdowns, Meidam_2014}. This parametrised model is hence called pSEOBNRv5HM. 
+This decision is made in particularly to implement the same model in Ref. \cite{toubiana2024measuringsourcepropertiesquasinormalmode}. The results presented in this last article point out that the current model used to recover LISA GWs signals are not accurate enough but they are biased. Recovering a full GR signal, deviations from GR were erroneously detected, showing that the pSEOBNRv5HM model is affected by systematic errors and it is non suitable for real astrophysical signal, already for an SNR of $\mathcal{O}(100)$ when we include all the available harmonics. 
+
+
+\subsection{Wavelets to improve the robustness}
+
+As previously highlighted, the pSEOBNRv5HM model exhibits biases in recovering the injected synthetic signal. In this work, we propose to modify the waveform model by introducing a sum of sine-Gaussian wavelets. The goal is to reconstruct the signal more accurately, not by allowing the deviations parameters to bias themselves in order to fit the injection, but rather by compensating for the mismatch between the injected waveform and the recovered pSEOBNRv5HM waveform through the wavelets. In this way, the wavelets should act as a corrective layer that captures the residual discrepancies without distorting the physical parameter estimation. 
+
+A single wavelet is described by five parameters:
+
+\begin{equation}
+	h_{\text{wav}}(t) = A \exp \left[ - 2\pi i \nu (t - \xi) - \left( \frac{t - \xi}{\tau} \right)^2 + i \phi \right],
+\end{equation}
+
+\noindent 
+$A$ and $\phi$ are the wavelet amplitude and phase, $\tau$ is the wavelet width, $\nu$ the frequencies, and $\xi$ is the wavelet central time.
+
+The full reconstruction model is then:
+
+\begin{equation}
+	h(t) = h_+(t) - i h_\times(t)+ \sum_{n=1}^{N} A_n \exp \left[ 
+- 2\pi i \nu_n (t - \xi_n) - \left( \frac{t - \xi_n}{\tau_n} \right)^2 + i \phi_n \right],
+\label{eq:full_model}
+\end{equation}
+
+\noindent
+where $h_+$ and $ h_\times$ are given by the expression presented in \ref{ssec:Waveform_modelling}, and $N$ is the number of wavelets we take into account.
+
+
+\subsection{Bayesian analysis}
+\label{Bayesian_Analysis}
+
+
+In order to assess how much our reconstruction pSEOBNRv5HM model adapts to the injection signal, and to estimate the parameters of the model, and their potential biases, we work in a Bayesian statistical framework.
+
+The posterior distribution of the source parameters $\theta$, $p(\theta | d)$, will be given by the Bayes's theorem:
+
+\begin{equation}
+	p(\theta | d) = \frac{p(d | \theta) \, p(\theta)}{p(d)}
+\end{equation}
+
+\noindent 
+where $p(d | \theta)$ is the likelihood, $p(\theta)$ the prior, and $p(d)$ the evidence. We are not interested in selecting a model, so the evidence behaves just as a normalization constant, allowing us to discard it. 
+
+We choose flat priors for the following parameters: $M$, $q$, $\chi_1$, $\chi_2$, $t_c$, $\phi_c$, $\psi$, $\cos(\iota)$, and $\log_{10}(D_L)$. The sky location parameters, $\lambda$ and $\beta$, are fixed to their true value to facilitate the convergence of the chains. This assumptions should not affect our result since it has been shown that these parameters not correlate strongly with the intrinsic ones \cite{Marsat_2021}, at least for aligned-spin binaries. The prior distributions for the QNM deviations parameters, $\delta f_{\ell m}$ and $\delta \tau_{\ell m}$, are also flat between -1 and +1. 
+
+Regarding instrumental noise, we adopt the \texttt{SciRDv1} noise curve \cite{LISA2018}, which corresponds to the scientific requirement for the LISA mission and defines a pessimistic noise level compared to current predictions, making this work robust respect to future real investigation. The SNR of a signal $h$ is defined as SNR $ = \sqrt{(h|h)} $, where $(h|h)$, is the noise-weighted inner product between the signal and itself. The inner product definition,  between two data streams $d_1$ and $d_2$, we adopt is the following:
+
+\begin{equation}
+(d_1 | d_2) = 4 \, \mathrm{Re} \int_0^{+\infty} \frac{d_1(f) \, d_2^*(f)}{S_n(f)} \, df
+\end{equation}
+
+\noindent 
+where $S_n(f)$ is the power spectral density (PSD).
+
+We assume that the noise is stationary and Gaussian. The stationary condition implies that, given a signal $ d = h + n $, where $h$ is the GW signal and $n$ the noise,  $\langle n(t) \rangle = 0 $, and $ \langle n^2(t) \rangle = \frac{1}{2} \int_{-\infty}^{+\infty} S_n(f) \, df$. The likelihood is then:
+
+\begin{equation}
+p(d|\theta) \propto \prod_{c \in [A, E]} \exp\left[ -\frac{1}{2} \left( d_c - h_c(\theta) \,\middle|\, d_c - h_c(\theta) \right) \right].
+\end{equation}
+
+The posterior distributions are then sampled via a Markov Chain Monte Carlo (MCMC) algorithm. In this work, we employ the \texttt{Eryn} sampler \cite{Karnesis_2023, michael_katz_2023_7705496}, an advanced MCMC framework built on top of the \texttt{emcee} ensemble sampler \cite{2013PASP..125..306F}. \texttt{Eryn} extends the capabilities of \texttt{emcee} by incorporating features such as parallel tempering, support for multiple model types, and Reversible Jump MCMC to handle unknown model counts, to accommodate more complex inference problems.
