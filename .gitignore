@@ -1,0 +1,13 @@
+.DS_Store
+*.aux
+*.run.xml
+*.toc
+*.bbl
+*.blx-bib
+*.blx.bib
+*blx.bib
+*.log
+*.synctex.gz
+*.synctex.blg
+Tesi_Magistrale.pdf
+*.blg
